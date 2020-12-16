@@ -1,0 +1,16 @@
+[package]
+name = "hello-world"
+version = "0.1.0"
+authors = ["Kyle Hanson <me@khanson.io>"]
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+serde = { version = "1.0.114", features = ["derive"] }
+assemble_app = {path = "../assemble_app_rs"}
+maud = "*"
+
+[profile.release]
+lto = true
+opt-level = 's'
