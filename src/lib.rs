@@ -47,7 +47,10 @@ impl View for ViewHandler {
               }
             }
             p class="mt-4 text-lg leading-6 text-indigo-200" {
-              "Interact with other tabs by clicking the button below. View the source here: "
+
+              a href="https://github.com/assemble-app/hello-world-rs/blob/main/src/lib.rs" {
+                "https://github.com/assemble-app/hello-world-rs"
+              }
             }
             p class="mt-4 text-lg leading-6 text-indigo-200" {
               "Number of clicks from this tab: " (self.clicks)
