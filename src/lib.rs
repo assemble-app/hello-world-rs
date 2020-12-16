@@ -1,3 +1,4 @@
+
 #[macro_use]
 extern crate assemble_app;
 #[macro_use]
@@ -6,7 +7,6 @@ extern crate serde;
 extern crate maud;
 use assemble_app::*;
 use maud::html;
-
 use serde::{Deserialize, Serialize};
 use std::collections::HashMap;
 
@@ -43,13 +43,17 @@ impl View for ViewHandler {
           div class="max-w-2xl mx-auto text-center py-16 px-4 sm:py-20 sm:px-6 lg:px-8" {
             h2 class="text-3xl font-extrabold text-white sm:text-4xl" {
               span class="block" {
-                "This page was written in rust"
+                "This page was completely written in rust"
               }
             }
             p class="mt-4 text-lg leading-6 text-indigo-200" {
-
-              a href="https://github.com/assemble-app/hello-world-rs/blob/main/src/lib.rs" {
-                "https://github.com/assemble-app/hello-world-rs"
+              span {
+                "Click the button below to send an event across the network. Open in multiple tabs to see how they interact." 
+              }
+            }
+            p class="mt-4 text-lg leading-6 text-indigo-200" {
+              a class="ml-2 underline" href="https://github.com/assemble-app/hello-world-rs/blob/main/src/lib.rs" {
+                "View Source"
               }
             }
             p class="mt-4 text-lg leading-6 text-indigo-200" {
